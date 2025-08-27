@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>WG Simple Dash</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235667f7'%3E%3Cpath d='M12 2L2 7v10l10 5 10-5V7l-10-5zm0 2.3L19.8 12 12 17.7 4.2 12 12 4.3z'/%3E%3C/svg%3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+  <header>
+    <h1>WG Simple Dash</h1>
+    <p class="subtitle">Secure tunnel monitoring</p>
+  </header>
+
+  <section class="stats">
+    <div class="card">
+      <span class="label">Active Connections</span>
+      <span id="active" class="status-idle value">-</span>
+    </div>
+    <div class="card">
+      <span class="label">Received</span>
+      <span id="rx" class="value">-</span>
+    </div>
+    <div class="card">
+      <span class="label">Sent</span>
+      <span id="tx" class="value">-</span>
+    </div>
+  </section>
+  <table>
+    <thead>
+      <tr>
+        <th>Interface</th>
+        <th>Peer Name</th>
+        <th>Public Key</th>
+        <th>Endpoint</th>
+        <th>Status</th>
+        <th>Received</th>
+        <th>Sent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="6" style="text-align:center;font-style:italic;">Loading…</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <span id="last-update">Last update --:--:--</span>
+    <span id="start-time">Monitoring since --:--:--</span>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
