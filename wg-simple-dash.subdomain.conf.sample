@@ -1,0 +1,32 @@
+## Version 2025/09/05
+# make sure that your dns has a cname set for dashboard
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    server_name wg.*;
+
+    include /config/nginx/ssl.conf;
+
+    allow 10.0.0.0/8;
+    allow 172.16.0.0/12;
+    allow 192.168.0.0/16;
+    deny all;
+
+    root /config/www/wg-simple-dash;
+    index index.php;
+
+    client_max_body_size 0;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args =404;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        include /etc/nginx/fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+    }
+}
