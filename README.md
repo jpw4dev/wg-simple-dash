@@ -1,7 +1,7 @@
 # wg-simple-dash
-Simple dashboard for WireGuard containers
+Simple dashboard for [wg-proxy](https://github.com/jpw4dev/wg-proxy)
 
-This was specifically built to use with LinuxServer.io wireguard and swag containers. It may work with others with some modification.
+This was specifically built to use with [wg-proxy](https://github.com/jpw4dev/wg-proxy) and LinuxServer.io's SWAG. It may work with others with some modification.
 
 EXPOSING THE DASHBOARD TO THE INTERNET IS STRONGLY DISCOURAGED.
 
